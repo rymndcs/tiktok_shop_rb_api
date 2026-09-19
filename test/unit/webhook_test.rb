@@ -9,12 +9,28 @@ require_relative "unit_helper"
 class WebhookTest < Minitest::Test
   include UnitHelper
 
-  OFFICIAL = A.webhook_vectors.first
+  # The official vector: app key "abcdef", app secret "123", the documented body and digest.
+  OFFICIAL = { raw_body: A::OFFICIAL_WEBHOOK_BODY,
+               signature: "5dec0f11ec2f6783b8deee53c9ffbf8d024302f7c7e7fa55a35d17629031ac05" }.freeze
 
   def test_the_official_vector_is_hmac_of_app_key_plus_raw_body
-    assert_equal "5dec0f11ec2f6783b8deee53c9ffbf8d024302f7c7e7fa55a35d17629031ac05",
-                 OpenSSL::HMAC.hexdigest("SHA256", "123", "abcdef#{OFFICIAL[:raw_body]}")
+    assert_equal OFFICIAL[:signature], OpenSSL::HMAC.hexdigest("SHA256", "123", "abcdef#{OFFICIAL[:raw_body]}")
     assert TiktokShopRbApi::Webhook.verify(raw_body: OFFICIAL[:raw_body], signature: OFFICIAL[:signature],
+                                           app_key: "abcdef", app_secret: "123")
+    assert TiktokShopRbApi::Webhook.verify(raw_body: OFFICIAL[:raw_body], signature: OFFICIAL[:signature].upcase,
+                                           app_key: "abcdef", app_secret: "123")
+  end
+
+  def test_client_verify_webhook_with_the_official_vector
+    client = TiktokShopRbApi::Client.new(app_key: "abcdef", app_secret: "123", transport: FakeTransport.new)
+    event = client.verify_webhook(raw_body: OFFICIAL[:raw_body], signature: OFFICIAL[:signature])
+
+    assert_equal "1", event.code
+    assert_equal :other, event.type
+    assert_raises(TiktokShopRbApi::WebhookSignatureError) do
+      client.verify_webhook(raw_body: "#{OFFICIAL[:raw_body]} ", signature: OFFICIAL[:signature])
+    end
+    refute TiktokShopRbApi::Webhook.verify(raw_body: OFFICIAL[:raw_body], signature: "Bearer #{OFFICIAL[:signature]}",
                                            app_key: "abcdef", app_secret: "123")
   end
 
@@ -22,7 +38,7 @@ class WebhookTest < Minitest::Test
     reserialized = JSON.generate(JSON.parse(A.webhook_vectors.last[:raw_body]))
 
     refute TiktokShopRbApi::Webhook.verify(raw_body: reserialized, signature: A.webhook_vectors.last[:signature],
-                                           app_key: "abcdef", app_secret: "123")
+                                           **A.webhook_credentials)
   end
 
   def test_the_wrong_app_key_does_not_verify

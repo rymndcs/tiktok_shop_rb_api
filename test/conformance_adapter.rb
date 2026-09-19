@@ -7,12 +7,11 @@ require "stringio"
 # need. See test/conformance/helper.rb for the interface.
 module ConformanceAdapter
   DOC = "https://partner.tiktokshop.com/docv2/page"
-  # The client's app key and secret are those of the official webhook example in DOC/tts-webhooks-overview, so the
-  # client verifies that vector. The signing vectors use the secret of the official signing example in
-  # DOC/sign-your-api-request, and every call is stamped with that example's timestamp.
-  APP_KEY = "abcdef"
-  APP_SECRET = "123"
-  VECTOR_SECRET = "e59af819cc"
+  # The app key, secret and timestamp of the official signing example in DOC/sign-your-api-request. The official
+  # webhook example's credentials ("abcdef" / "123") are too short to stand in for a secret in the redaction tests,
+  # which look for it as a substring of every log line, so that vector is checked in test/unit/webhook_test.rb.
+  APP_KEY = "29a39d"
+  APP_SECRET = "e59af819cc"
   FIXED_TIME = Time.at(1_623_812_664).utc
   # The access token of the same example's curl command, and the auth code and refresh token of
   # DOC/authorization-overview-202407.
@@ -276,8 +275,8 @@ module ConformanceAdapter
   end
 
   # The documented wrapped HMAC, computed here with OpenSSL rather than through the gem's Signer.
-  def hmac(base_string, secret = APP_SECRET)
-    OpenSSL::HMAC.hexdigest("SHA256", secret, "#{secret}#{base_string}#{secret}".b)
+  def hmac(base_string)
+    OpenSSL::HMAC.hexdigest("SHA256", APP_SECRET, "#{APP_SECRET}#{base_string}#{APP_SECRET}".b)
   end
 
   def signing_vectors
@@ -294,7 +293,7 @@ module ConformanceAdapter
         expected_base_string: "/event/202309/webhooksapp_key68xu9ks5p4i8shop_cipherROW_xkMbgAAAeVAQra0eZWebFQq5aIKt" \
                               "timestamp1696909648#{webhook_body}",
         expected_signature: hmac("/event/202309/webhooksapp_key68xu9ks5p4i8shop_cipherROW_xkMbgAAAeVAQra0eZWebFQq5a" \
-                                 "IKttimestamp1696909648#{webhook_body}", VECTOR_SECRET),
+                                 "IKttimestamp1696909648#{webhook_body}"),
         parts: { path: "/event/202309/webhooks", body: webhook_body,
                  query: { "timestamp" => "1696909648", "shop_cipher" => "ROW_xkMbgAAAeVAQra0eZWebFQq5aIKt",
                           "app_key" => "68xu9ks5p4i8" } } },
@@ -303,14 +302,14 @@ module ConformanceAdapter
         expected_base_string: "/order/202309/orders/searchapp_key29a39dpage_size100page_token#{ORDER_PAGE_TOKEN}" \
                               "shop_cipher#{SHOP_CIPHER}timestamp1623812664#{order_body}",
         expected_signature: hmac("/order/202309/orders/searchapp_key29a39dpage_size100page_token#{ORDER_PAGE_TOKEN}" \
-                                 "shop_cipher#{SHOP_CIPHER}timestamp1623812664#{order_body}", VECTOR_SECRET),
+                                 "shop_cipher#{SHOP_CIPHER}timestamp1623812664#{order_body}"),
         parts: { path: "/order/202309/orders/search", body: order_body,
                  query: { "shop_cipher" => SHOP_CIPHER, "page_token" => ORDER_PAGE_TOKEN, "sign" => "x",
                           "access_token" => "y", "page_size" => "100", "timestamp" => "1623812664",
                           "app_key" => "29a39d" } } }
     ].map do |v|
       string = signer.base_string(**v[:parts])
-      v.merge(base_string: string, signature: signer.sign(VECTOR_SECRET, string))
+      v.merge(base_string: string, signature: signer.sign(APP_SECRET, string))
     end
   end
 
@@ -359,18 +358,20 @@ module ConformanceAdapter
     false
   end
 
+  # The official body of DOC/tts-webhooks-overview, whose official digest (app_key "abcdef", secret "123") is
+  # checked in test/unit/webhook_test.rb.
+  OFFICIAL_WEBHOOK_BODY = '{"type":1,"tts_notification_id":"7380066284010030890","shop_id":"7495540735365777507",' \
+                          '"timestamp":1718305585,"data":{"is_on_hold_order":true,"order_id":"576653688135258178",' \
+                          '"order_status":"UNPAID","update_time":1718305585}}'
+
+  # Self-generated: HMAC-SHA256(app_secret, app_key + raw_body) computed here with OpenSSL, with this adapter's
+  # credentials, over the official example body and over the documented type 7 event example (whitespace and all).
   def webhook_vectors
-    official = '{"type":1,"tts_notification_id":"7380066284010030890","shop_id":"7495540735365777507",' \
-               '"timestamp":1718305585,"data":{"is_on_hold_order":true,"order_id":"576653688135258178",' \
-               '"order_status":"UNPAID","update_time":1718305585}}'
     expiring = webhook_parse_samples.find { |s| s[:expect][:code] == "7" }[:raw_body]
-    [
-      { name: "official vector (DOC/tts-webhooks-overview)", url: nil, raw_body: official,
-        signature: "5dec0f11ec2f6783b8deee53c9ffbf8d024302f7c7e7fa55a35d17629031ac05" },
-      # Self-generated with OpenSSL over the documented type 7 event example, whitespace and all.
-      { name: "type 7 example body (self-generated)", url: nil, raw_body: expiring,
-        signature: OpenSSL::HMAC.hexdigest("SHA256", "123", "abcdef#{expiring}") }
-    ]
+    [["official example body (self-generated digest)", OFFICIAL_WEBHOOK_BODY],
+     ["type 7 example body (self-generated digest)", expiring]].map do |name, raw_body|
+      { name:, url: nil, raw_body:, signature: OpenSSL::HMAC.hexdigest("SHA256", APP_SECRET, "#{APP_KEY}#{raw_body}") }
+    end
   end
 
   # The event examples on the topic pages DOC/5-product-status-change, 6-seller-deauthorization,
