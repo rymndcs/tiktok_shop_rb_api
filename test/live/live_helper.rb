@@ -23,7 +23,7 @@ module LiveHelper
   REQUIRED = %w[APP_KEY APP_SECRET ACCESS_TOKEN SHOP_CIPHER].freeze
   SECRET_KEYS = /token|secret|\Asign\z|\Aauth_code\z/i
   PERSONAL_KEYS = /email|phone|name|address/i
-  UNRECORDED_PATHS = %r{\A/order/}
+  UNRECORDED_PATHS = %r{/order/\d+/}
 
   module_function
 

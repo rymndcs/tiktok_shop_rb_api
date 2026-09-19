@@ -66,6 +66,18 @@ class LiveRecorderTest < Minitest::Test
     end
   end
 
+  def test_order_responses_behind_a_base_url_path_are_never_recorded
+    Dir.mktmpdir do |dir|
+      order = { "code" => 0, "request_id" => "r", "data" => { "orders" => [{ "id" => "576461413038785752" }] } }
+      inner = FakeTransport.new(FakeTransport.json(order))
+      recorder = LiveHelper::Recorder.new(inner, secrets: [], label: "TIKTOK_SHOP_LIVE", dir:)
+      recorder.call(method: :post, url: "https://proxy.example/tiktok/order/202309/orders/search", headers: {},
+                    body: "{}")
+
+      assert_empty Dir.children(dir)
+    end
+  end
+
   def test_personal_data_keys_are_redacted_outside_orders
     Dir.mktmpdir do |dir|
       address = { "full_address" => "1 Main St", "postal_code" => "10001" }
