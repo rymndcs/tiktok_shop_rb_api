@@ -18,4 +18,5 @@ All notable changes to this gem are documented here. The format follows
   and token hosts, plus `base_url:` / `auth_base_url:` / `token_base_url:` for any other host (RAC-277).
 - Per-endpoint version constants, the header-borne access token, signing over the exact body bytes, and
   `idempotency_key` making a create idempotent (RAC-277).
-- Opt-in live tests (`rake test:live`) that can record redacted responses into `test/fixtures/` (RAC-277).
+- Opt-in live tests (`rake test:live`) that can record redacted responses into `test/fixtures/`, never orders and with
+  personal-data keys redacted (RAC-277).

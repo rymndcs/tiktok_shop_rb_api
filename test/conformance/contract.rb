@@ -28,7 +28,7 @@ module Conformance
 
     # Class => { initialize: params, singleton: { name => params }, instance: { name => params } }.
     # `instance` is the exact list of public methods the class itself defines, besides declared extensions.
-    # `initialize` is the exact leading parameter list; after it a class may take only optional keywords that its
+    # `initialize` is the exact parameter list in order, except that a class may also take optional keywords that its
     # EXTENSIONS declare as "Class#keyword", each with a public reader of the same name (surface_test.rb).
     classes: {
       "Client" => {
@@ -124,11 +124,11 @@ module Conformance
 
     webhook_types: %i[authorization_expiring deauthorized product_status other],
 
-    # Every shared method that makes a request; the adapter must supply a call for each (requests_test.rb).
     # The shared calls that obtain tokens. They reach the endpoint's :token host when ENDPOINTS carries one (with
     # the declared Client#token_base_url override), else the API host (hosts_test.rb).
     token_calls: %w[auth.exchange_code auth.refresh],
 
+    # Every shared method that makes a request; the adapter must supply a call for each (requests_test.rb).
     shared_calls: %w[
       auth.exchange_code auth.refresh client.authorized_shops client.request
       shop.info shop.limits shop.request

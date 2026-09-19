@@ -26,12 +26,14 @@ module Conformance
       extensions.map(&:first).uniq - contract_class_names
     end
 
-    # The contract's parameters, in order, then only optional keywords declared in EXTENSIONS as "Class#keyword".
+    # The contract's parameters, in order, plus only optional keywords declared in EXTENSIONS as "Class#keyword".
+    # A declared keyword may sit anywhere among them (token_base_url: follows auth_base_url: by convention).
     def assert_initialize(class_name, params)
       actual = const(class_name).instance_method(:initialize).parameters
+      extras = actual - params
 
-      assert_equal params, actual.first(params.size), "#{class_name}.new"
-      actual.drop(params.size).each do |kind, name|
+      assert_equal params, actual - extras, "#{class_name}.new"
+      extras.each do |kind, name|
         assert_equal :key, kind, "#{class_name}.new #{name}: an extra keyword must be optional"
         assert_includes extension_members(class_name), name, "#{class_name}.new #{name}: undeclared keyword"
       end

@@ -278,8 +278,9 @@ TIKTOK_SHOP_LIVE_ACCESS_TOKEN=... TIKTOK_SHOP_LIVE_SHOP_CIPHER=... bundle exec r
 ```
 
 TikTok has no sandbox host: use a Partner Center development shop with the same variables. Add
-`TIKTOK_SHOP_RECORD=1` to replace the documentation fixtures with redacted recordings of successful responses (error
-responses are never recorded).
+`TIKTOK_SHOP_RECORD=1` to replace the documentation fixtures with redacted recordings of successful responses. Error
+responses and order responses are never recorded, so buyers' personal data never reaches a fixture; personal-data keys
+(email, phone, name, nickname, address) are redacted wherever else they appear.
 
 ## Contract version
 

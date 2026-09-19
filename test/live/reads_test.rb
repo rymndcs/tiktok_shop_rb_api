@@ -4,7 +4,7 @@ require_relative "live_helper"
 
 # The phase-0 read checks from the TikTok plan (section 9) that need a real app and shop: our signature, egress IP
 # and header-borne token are accepted, and the read endpoints answer in the documented shapes. With
-# TIKTOK_SHOP_RECORD=1 each response replaces its documentation fixture.
+# TIKTOK_SHOP_RECORD=1 each response except the orders' replaces its documentation fixture.
 class LiveReadsTest < Minitest::Test
   include LiveHelper::Gate
 

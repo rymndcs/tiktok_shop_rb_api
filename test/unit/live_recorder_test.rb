@@ -50,5 +50,40 @@ class LiveRecorderTest < Minitest::Test
       assert_empty Dir.children(dir)
     end
   end
+
+  def test_order_responses_are_never_recorded
+    Dir.mktmpdir do |dir|
+      order = { "code" => 0, "request_id" => "r",
+                "data" => { "orders" => [{ "id" => "576461413038785752", "buyer_email" => "b@example.com" }] } }
+      inner = FakeTransport.new(FakeTransport.json(order), FakeTransport.json(order))
+      recorder = LiveHelper::Recorder.new(inner, secrets: [], label: "TIKTOK_SHOP_LIVE", dir:)
+      recorder.call(method: :post, url: "https://h.test/order/202309/orders/search?page_size=10", headers: {},
+                    body: "{}")
+      recorder.call(method: :get, url: "https://h.test/order/202507/orders?ids=576461413038785752", headers: {},
+                    body: nil)
+
+      assert_empty Dir.children(dir)
+    end
+  end
+
+  def test_personal_data_keys_are_redacted_outside_orders
+    Dir.mktmpdir do |dir|
+      address = { "full_address" => "1 Main St", "postal_code" => "10001" }
+      data = { "id" => "7", "Buyer_Email" => "b@example.com", "PHONE_NUMBER" => 5_551_234, "name" => "Ana Cruz",
+               "buyer_nickname" => "ana", "recipient_address" => address, "Buyer_Address" => address,
+               "note" => nil, "status" => "ACTIVE" }
+      inner = FakeTransport.new(FakeTransport.json({ "code" => 0, "request_id" => "r", "data" => data }))
+      recorder = LiveHelper::Recorder.new(inner, secrets: [], label: "TIKTOK_SHOP_LIVE", dir:)
+      recorder.call(method: :get, url: "https://h.test/logistics/202309/warehouses", headers: {}, body: nil)
+      text = File.read(File.join(dir, "logistics_202309_warehouses.json"))
+      recorded = JSON.parse(text)["body"]["data"]
+
+      %w[Buyer_Email PHONE_NUMBER name buyer_nickname recipient_address Buyer_Address].each do |key|
+        assert_equal "[REDACTED]", recorded[key], key
+      end
+      assert_equal({ "id" => "7", "note" => nil, "status" => "ACTIVE" }, recorded.slice("id", "note", "status"))
+      ["b@example.com", "Ana Cruz", "1 Main St", "5551234"].each { |value| refute_includes text, value }
+    end
+  end
 end
 # rubocop:enable Minitest/MultipleAssertions

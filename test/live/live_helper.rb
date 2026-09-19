@@ -12,7 +12,9 @@ require "logger"
 #             TIKTOK_SHOP_LIVE_BASE_URL and TIKTOK_SHOP_LIVE_TOKEN_BASE_URL.
 #   TIKTOK_SHOP_RECORD=1 writes every successful response (2xx, code 0), redacted, over
 #             test/fixtures/<path>.json with "_source" naming "recorded live <date>", replacing the documentation
-#             sample. Error responses are never recorded.
+#             sample. Error responses are never recorded, and neither is any order endpoint: orders carry buyers'
+#             personal data, so they stay on documentation samples. Personal-data keys (email, phone, name,
+#             nickname, address) are redacted wherever else they appear.
 #
 # TikTok has no sandbox host: a Partner Center development shop is reached with the same credentials and host.
 # The live tests only READ. They never refresh a token and never write.
@@ -20,6 +22,8 @@ module LiveHelper
   PREFIX = "TIKTOK_SHOP_LIVE"
   REQUIRED = %w[APP_KEY APP_SECRET ACCESS_TOKEN SHOP_CIPHER].freeze
   SECRET_KEYS = /token|secret|\Asign\z|\Aauth_code\z/i
+  PERSONAL_KEYS = /email|phone|name|address/i
+  UNRECORDED_PATHS = %r{\A/order/}
 
   module_function
 
@@ -80,6 +84,8 @@ module LiveHelper
     private
 
     def record(method, path, result)
+      return if path.match?(UNRECORDED_PATHS)
+
       parsed = JSON.parse(result[:body])
       return unless recordable?(result[:status], parsed)
 
@@ -106,6 +112,8 @@ module LiveHelper
     end
 
     def redact_member(key, value)
+      return "[REDACTED]" if key.to_s.match?(PERSONAL_KEYS) && !value.nil?
+
       key.to_s.match?(SECRET_KEYS) && value.is_a?(String) ? "[REDACTED]" : redact(value)
     end
   end

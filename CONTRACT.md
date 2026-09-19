@@ -44,7 +44,7 @@ No global configuration and no `configure` block: one process serves many storef
 credential. It is immutable and safe to share across threads.
 
 ```ruby
-client = ShopeeRbApi::Client.new(          # LazadaRbApi::Client / TiktokShopRbApi::Client: same keywords
+client = ShopeeRbApi::Client.new(          # Lazada/TikTok: same keywords, plus declared ones (below)
   app_key:       "2001887",                # Shopee partner_id | Lazada app_key | TikTok app_key (String or Integer)
   app_secret:    ENV.fetch("SHOPEE_PARTNER_KEY"),  # Shopee partner_key | Lazada/TikTok app_secret
   endpoint:      :sg,                      # a Symbol from the gem's ENDPOINTS table; default per gem
@@ -63,9 +63,10 @@ client.inspect      # => "#<ShopeeRbApi::Client app_key=\"2001887\" endpoint=:sg
 An unknown `endpoint:`, or a `base_url:` / `auth_base_url:` / `token_base_url:` that is not an http(s) URL, raises
 `ConfigurationError`.
 
-**Declared constructor keywords.** After the keywords above, a gem's `Client.new` may take only optional keywords that
-its `EXTENSIONS` declare as `"Client#<keyword>"`, and each has a public reader of the same name. The conformance suite
-checks the contract's keywords in order, then that every extra one is optional and declared.
+**Declared constructor keywords.** Besides the keywords above, a gem's `Client.new` may take only optional keywords
+that its `EXTENSIONS` declare as `"Client#<keyword>"`, and each has a public reader of the same name. A declared
+keyword may sit anywhere in the list; `token_base_url:` follows `auth_base_url:`. The conformance suite checks the
+contract's keywords in order, and that every other one is optional and declared.
 
 | Gem | Declared keywords | Why |
 |---|---|---|
