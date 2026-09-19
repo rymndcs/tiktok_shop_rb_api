@@ -138,7 +138,7 @@ is pinned in the gem, and bumped deliberately.
 | List orders (read-only) | `shop.orders.list(order_status: "UNPAID", sort_field: "create_time").each { \|o\| o["id"] }` | [`POST /order/202309/orders/search`](https://partner.tiktokshop.com/docv2/page/get-order-list-202309) |
 | Get order (read-only) | `shop.orders.get("576461413038785752").data["orders"]` | [`GET /order/202507/orders`](https://partner.tiktokshop.com/docv2/page/get-order-detail-202507) |
 
-**TikTok extensions** (declared in `TiktokShopRbApi::EXTENSIONS`; no sibling gem has them in this shape):
+**TikTok extensions** (declared in `TiktokShopRbApi::EXTENSIONS`; of these only `token_base_url:` also exists in a sibling gem, Lazada's):
 
 | Extension | Example | TikTok endpoint |
 |---|---|---|
