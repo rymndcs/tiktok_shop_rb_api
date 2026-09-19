@@ -1,0 +1,41 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "POST /product/202509/products/{product_id}/partial_edit"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "audit": {
+        "status": "AUDITING"
+      },
+      "product_id": "1729592969712207008",
+      "skus": [
+        {
+          "external_sku_id": "1729592969712207012",
+          "fees": [
+            {
+              "additional_attribute": "SINGLE_USE",
+              "amount": "1.01",
+              "type": "PFAND"
+            }
+          ],
+          "id": "1729592969712207012",
+          "sales_attributes": [
+            {
+              "id": "100000",
+              "value_id": "1729592969712207123"
+            }
+          ],
+          "seller_sku": "seller sku xxaa"
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

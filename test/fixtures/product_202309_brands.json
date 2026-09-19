@@ -1,0 +1,28 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/get-brands-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "GET /product/202309/brands"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "brands": [
+        {
+          "id": "7082427311584347905",
+          "name": "Teas",
+          "authorized_status": "AUTHORIZED",
+          "is_t1_brand": true,
+          "brand_status": "AVAILABLE"
+        }
+      ],
+      "total_count": 10000,
+      "next_page_token": "b2Zmc2V0PTAK"
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

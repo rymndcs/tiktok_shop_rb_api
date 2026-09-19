@@ -1,0 +1,29 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/authorization-overview-202407",
+    "pulled": "2026-09-20",
+    "origin": "official documentation, section \"Get Refresh Token API\" response sample",
+    "endpoint": "GET /api/v2/token/refresh"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "message": "success",
+    "request_id": "2024080809462301024509910319695C45",
+    "data": {
+      "access_token": "TTP_Fw8rBwAAAAAkW03FYd09DG-9INtpw361hWthei8S3fHX8iPJ5AUv99fLSCYD9-UucaqxTgNRzKZxi5",
+      "access_token_expire_in": 1660556783,
+      "refresh_token": "TTP_NTUxZTNhYTQ2ZDk2YmRmZWNmYWY2YWY2YzkxNGYwNjQ3YjkzYTllYjA0YmNlMw",
+      "refresh_token_expire_in": 1691487031,
+      "open_id": "7010736057180325637",
+      "seller_name": "Test Seller",
+      "seller_base_region": "US",
+      "user_type": 0,
+      "granted_scopes": [
+        "seller.affiliate_collaboration.read",
+        "seller.affiliate_collaboration.write"
+      ]
+    }
+  }
+}

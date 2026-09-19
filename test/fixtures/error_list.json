@@ -1,0 +1,1879 @@
+{
+ "_source": {
+  "urls": [
+   "https://partner.tiktokshop.com/docv2/page/activate-product-202309",
+   "https://partner.tiktokshop.com/docv2/page/check-listing-prerequisites-202312",
+   "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309",
+   "https://partner.tiktokshop.com/docv2/page/common-errors",
+   "https://partner.tiktokshop.com/docv2/page/create-product-202309",
+   "https://partner.tiktokshop.com/docv2/page/deactivate-products-202309",
+   "https://partner.tiktokshop.com/docv2/page/edit-product-202509",
+   "https://partner.tiktokshop.com/docv2/page/get-brands-202309",
+   "https://partner.tiktokshop.com/docv2/page/get-categories-202309",
+   "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507",
+   "https://partner.tiktokshop.com/docv2/page/get-product-202309",
+   "https://partner.tiktokshop.com/docv2/page/inventory-search-202309",
+   "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509",
+   "https://partner.tiktokshop.com/docv2/page/product-information-issue-diagnosis-202405",
+   "https://partner.tiktokshop.com/docv2/page/recommend-category-202309",
+   "https://partner.tiktokshop.com/docv2/page/search-products-202502",
+   "https://partner.tiktokshop.com/docv2/page/update-inventory-202309",
+   "https://partner.tiktokshop.com/docv2/page/update-price-202309",
+   "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  ],
+  "pulled": "2026-09-20",
+  "origin": "the Error Code table of every endpoint reference page this gem calls, plus the common-errors page"
+ },
+ "pairs": [
+  {
+   "code": "10002014",
+   "message": "Failed to get orders, If multiple retry have failed, please contact the platform for assistance",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+  },
+  {
+   "code": "10002015",
+   "message": "Failed to get orders, If multiple retry have failed, please contact the platform for assistance",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+  },
+  {
+   "code": "10006402",
+   "message": "Internal error. Please try again. If the issue persists after multiple attempts, please contact platform support.",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+  },
+  {
+   "code": "10037002",
+   "message": "Failed to get orders, If multiple retry have failed, please contact the platform for assistance",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+  },
+  {
+   "code": "10037003",
+   "message": "Failed to get orders, If multiple retry have failed, please contact the platform for assistance",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+  },
+  {
+   "code": "10037004",
+   "message": "Failed to get orders, If multiple retry have failed, please contact the platform for assistance",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+  },
+  {
+   "code": "101000",
+   "message": "Invalid query or header. The `category_asset_cipher` query parameter or `x-tts-access-token` header is invalid.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "105002",
+   "message": "Expired credentials. The `access_token` or `x-tts-access-token` header has expired.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "105005",
+   "message": "Access denied. The app is not authorized to access the endpoint because the access scopes granted for the app or the access token do not contain the required access scope for the endpoint.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "106001",
+   "message": "Invalid credentials. The `sign` query parameter is invalid.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "106013",
+   "message": "Missing identifier. The `shop_cipher` query parameter is required to identify the target shop.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "11050001",
+   "message": "invalid param",
+   "source": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  },
+  {
+   "code": "12001000",
+   "message": "product api internal error",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12009014",
+   "message": "seller no permission for product error",
+   "source": "https://partner.tiktokshop.com/docv2/page/product-information-issue-diagnosis-202405"
+  },
+  {
+   "code": "12019006",
+   "message": "product description is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12019008",
+   "message": "Product id is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/inventory-search-202309"
+  },
+  {
+   "code": "12019009",
+   "message": "product image list is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/recommend-category-202309"
+  },
+  {
+   "code": "12019011",
+   "message": "product package weight is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12019012",
+   "message": "product package size is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12019013",
+   "message": "brand id is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12019015",
+   "message": "The number of SKU exceed the limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/inventory-search-202309"
+  },
+  {
+   "code": "12019019",
+   "message": "sale property is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/edit-product-202509"
+  },
+  {
+   "code": "12019022",
+   "message": "SKU must contain a valid warehouse.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12019024",
+   "message": "stock count is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/update-inventory-202309"
+  },
+  {
+   "code": "12019027",
+   "message": "The maximum count of “seller_skus” in the search filter is 10.",
+   "source": "https://partner.tiktokshop.com/docv2/page/search-products-202502"
+  },
+  {
+   "code": "12019028",
+   "message": "Multiple warehouses detected. Include all warehouse IDs and the corresponding details and try again.",
+   "source": "https://partner.tiktokshop.com/docv2/page/update-inventory-202309"
+  },
+  {
+   "code": "12019045",
+   "message": "price is locked",
+   "source": "https://partner.tiktokshop.com/docv2/page/update-price-202309"
+  },
+  {
+   "code": "12019056",
+   "message": "sku not allow add",
+   "source": "https://partner.tiktokshop.com/docv2/page/edit-product-202509"
+  },
+  {
+   "code": "12019057",
+   "message": "sku not allow delete",
+   "source": "https://partner.tiktokshop.com/docv2/page/edit-product-202509"
+  },
+  {
+   "code": "12019059",
+   "message": "seller sku is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12019060",
+   "message": "package_dimension_unit field is for America market(US) only.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12019061",
+   "message": "Product weight or dimensions unit does not support the imperial units on non-US local products.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12019064",
+   "message": "No matching categories. Provide the full name of your product, edit its product properties, and try again.",
+   "source": "https://partner.tiktokshop.com/docv2/page/recommend-category-202309"
+  },
+  {
+   "code": "12019087",
+   "message": "The number of SKU IDs exceeds the limit of 10",
+   "source": "https://partner.tiktokshop.com/docv2/page/search-products-202502"
+  },
+  {
+   "code": "12019094",
+   "message": "Conflicting presale fields. Remove `pre_sale.fulfillment_type` if you want to set `pre_sale.type` to `NONE`.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12019095",
+   "message": "`pre_sale.fulfillment_type` is missing or empty.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12019096",
+   "message": "The value for `pre_sale.type` is missing.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12019097",
+   "message": "`pre_sale.fulfillment_type.release_date` must be set to a non-zero value.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12019098",
+   "message": "`pre_sale.fulfillment_type.handling_duration_days` must be set to a non-zero value.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12019099",
+   "message": "The specified `pre_sale.type` is not supported in your region. Refer to the API documentation for details.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12019100",
+   "message": "All SKUs of a product must have the same `pre_sale.type`. Do not assign different values.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12019108",
+   "message": "page number is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-brands-202309"
+  },
+  {
+   "code": "12019109",
+   "message": "page size is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-brands-202309"
+  },
+  {
+   "code": "12019112",
+   "message": "seller id is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/inventory-search-202309"
+  },
+  {
+   "code": "12019113",
+   "message": "product status is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/update-price-202309"
+  },
+  {
+   "code": "12019114",
+   "message": "Seller has no permission",
+   "source": "https://partner.tiktokshop.com/docv2/page/inventory-search-202309"
+  },
+  {
+   "code": "12019116",
+   "message": "The image dimensions exceed the allowed limits.",
+   "source": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  },
+  {
+   "code": "12019118",
+   "message": "search create time invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/search-products-202502"
+  },
+  {
+   "code": "12019119",
+   "message": "search update time invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/search-products-202502"
+  },
+  {
+   "code": "12019120",
+   "message": "The number of provided product IDs exceeds the limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12019121",
+   "message": "calculate price error",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12019123",
+   "message": "product of pageSize and pageNumber exceeds the maximum limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-brands-202309"
+  },
+  {
+   "code": "12019124",
+   "message": "pageSize and pageNumber need to be used together",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-brands-202309"
+  },
+  {
+   "code": "12019150",
+   "message": "The product ID does not exist.",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-product-202309"
+  },
+  {
+   "code": "12019210",
+   "message": "publish param invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-categories-202309"
+  },
+  {
+   "code": "12019215",
+   "message": "deposit balance is not enough",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12038002",
+   "message": "Invalid upload file. Please ensure you are passing the correct file data.",
+   "source": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  },
+  {
+   "code": "12038004",
+   "message": "Failed to process the image. The format or content is not supported.",
+   "source": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  },
+  {
+   "code": "12038005",
+   "message": "The file size exceeds the maximum allowed size.",
+   "source": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  },
+  {
+   "code": "12038014",
+   "message": "The image dimensions exceed the allowed limits. Allowed dimensions (width x height in pixels): {{min_width}} x {{min_height}} to {{max_width}} x {{max_height}}",
+   "source": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  },
+  {
+   "code": "12038015",
+   "message": "Failed to process the image. The format or content is not supported. Supported formats: {{formats}}",
+   "source": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+  },
+  {
+   "code": "12052002",
+   "message": "Incorrect category format",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052003",
+   "message": "Incorrect parcel height format",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052004",
+   "message": "Incorrect parcel width format",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052005",
+   "message": "Incorrect parcel length format",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052006",
+   "message": "Incorrect parcel weight format",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052012",
+   "message": "Incorrect price format",
+   "source": "https://partner.tiktokshop.com/docv2/page/update-price-202309"
+  },
+  {
+   "code": "12052013",
+   "message": "The product description cannot exceed maximum characters",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052015",
+   "message": "The product description is required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052023",
+   "message": "Category does not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052024",
+   "message": "Category is not final category",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052025",
+   "message": "The category is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052026",
+   "message": "Brand does not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052028",
+   "message": "Main product image is required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052031",
+   "message": "Invalid product ID(s) found",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052032",
+   "message": "The product does not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/deactivate-products-202309"
+  },
+  {
+   "code": "12052034",
+   "message": "This product doesn't belong to this shop",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052036",
+   "message": "The SKU ID is necessary",
+   "source": "https://partner.tiktokshop.com/docv2/page/update-inventory-202309"
+  },
+  {
+   "code": "12052037",
+   "message": "Couldn't update inventory. Possible causes:",
+   "source": "https://partner.tiktokshop.com/docv2/page/edit-product-202509"
+  },
+  {
+   "code": "12052038",
+   "message": "Product price locked due to ongoing promotion.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052048",
+   "message": "You cannot edit the specified product(s) as it isn't listed in your account or shop.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052050",
+   "message": "A single product cannot have more than 100 different SKUs",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052051",
+   "message": "The product name exceed max limit characters",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052054",
+   "message": "The seller SKU text length cannot exceed max limit characters",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052055",
+   "message": "The SKU inventory quantity for the warehouse must be within allowed limits.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052056",
+   "message": "The num of image in description cannot exceed max limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052073",
+   "message": "The product price is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052084",
+   "message": "The provided currency is not available for this shop/region.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052092",
+   "message": "product sale price is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052093",
+   "message": "Exceeded the product listing limit for the seller.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052094",
+   "message": "No multiple warehouse permission",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052096",
+   "message": "Unable to update the price for SKUs with no warehouse. Assign a warehouse and try again.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052097",
+   "message": "The warehouse does not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052104",
+   "message": "property is required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052105",
+   "message": "required qualification miss",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052109",
+   "message": "number of requests from merchants over limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052115",
+   "message": "seller has no warehouse",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052116",
+   "message": "product package size is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052128",
+   "message": "Size chart not found",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052144",
+   "message": "platform warehouse not support to edit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052151",
+   "message": "product property value contain restricted words",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052152",
+   "message": "sale property name contains restricted words",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052153",
+   "message": "sale property value contains restricted words",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052157",
+   "message": "One or more of the product attributes cannot be edited by cross-border sellers",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052159",
+   "message": "unique item total quantity must be one",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052160",
+   "message": "sku count must be one and disable variables",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052162",
+   "message": "unique item sku count must be one and disable varialbes",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052163",
+   "message": "The gift product are not allowed to be edited",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052172",
+   "message": "sale type is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052180",
+   "message": "The total number of search results can not exceed 10000.",
+   "source": "https://partner.tiktokshop.com/docv2/page/search-products-202502"
+  },
+  {
+   "code": "12052181",
+   "message": "The package weight of the product can not be zero.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052182",
+   "message": "The '{{sub_property_name}}' field is required as you've selected '{{parent_property_value}}' for '{{parent_property_name}}'.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052183",
+   "message": "The '{{sub_property_name}}' field should be left empty as you've selected '{{parent_property_value}}' for '{{parent_property_name}}'.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052200",
+   "message": "brand is expired",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052201",
+   "message": "You are not authorized to sell this brand in this category. To do so, apply through the Qualification Center in Seller Center.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052207",
+   "message": "receipt brand not support warehouse",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052208",
+   "message": "A brand authorization is required to publish this listing.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052216",
+   "message": "manufacturer info is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052217",
+   "message": "All region shops must use V2 categories. Check the documentation for further details.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052219",
+   "message": "instant product not support not for sale",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052220",
+   "message": "This category is prohibited or unsupported on TikTok Shop. Select another category.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052221",
+   "message": "Only whitelisted sellers are permitted to trade under current category",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052222",
+   "message": "category do not support cod",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052223",
+   "message": "This category is restricted. To sell in this category, apply through the Qualification Center in Seller Center.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052225",
+   "message": "You are not authorized to sell in this category because it does not fall under your shop's main category. Contact your account manager for help or select another category.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052226",
+   "message": "This category is restricted. To sell in this category, apply through the Qualification Center in Seller Center.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052227",
+   "message": "the category is unauthorized or unavailable",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052228",
+   "message": "combo product not support not for sale",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052229",
+   "message": "pre order product not support not for sale",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052230",
+   "message": "Category version and categoryID are not matched.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052235",
+   "message": "The format of url is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052236",
+   "message": "The protocol of the url is unsafe",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052237",
+   "message": "The path of url is unsafe",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052238",
+   "message": "The length of the url is greater than 200",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052240",
+   "message": "Do not support custom property.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052241",
+   "message": "attribute name or attribute id is empty.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052242",
+   "message": "The attribute name characters cannot exceed max_limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052243",
+   "message": "The product attribute or sale attribute name characters contain Chinese.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052244",
+   "message": "The attribute name duplicate.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052245",
+   "message": "The product attributes contained invalid characters. Please modify and re-submit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052246",
+   "message": "The {{property_type}} not support multi selected, attribute id is :{{property_id}}.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052247",
+   "message": "Do not support custom product attribute.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052248",
+   "message": "The {{property_type}} value name or attribute value id is empty.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052249",
+   "message": "The {{property_type}} value name characters cannot exceed {{max_limit}}, attribute value name is :{{property_value_name}}.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052250",
+   "message": "The {{property_type}} value name characters contain Chinese.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052251",
+   "message": "Duplicated attribute values found for an attribute. Remove or modify the duplicated value.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052253",
+   "message": "Duplicate attribute value id",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052254",
+   "message": "Duplicate attribute id",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052256",
+   "message": "The {{property_name}} value need to be positive integers or positive decimals .",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052260",
+   "message": "The product ID does not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052261",
+   "message": "product name is empty",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052262",
+   "message": "Chinese characters are not supported in product name",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052263",
+   "message": "product name prefix illegal",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052266",
+   "message": "The product name contains non-English characters.",
+   "source": "https://partner.tiktokshop.com/docv2/page/recommend-category-202309"
+  },
+  {
+   "code": "12052268",
+   "message": "seller does not support pre sale",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052269",
+   "message": "The selected time is outside the limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052273",
+   "message": "After the pre-sale product has been onlive product, the pre-sale info cannot be modified.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052274",
+   "message": "pre-sale and pre-order modes are mutually exclusive.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052275",
+   "message": "sku's mto day is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052278",
+   "message": "seller does not support make to order",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052282",
+   "message": "Product manufacturer is required.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052283",
+   "message": "The number of manufacturers cannot exceed the allowed limits.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052284",
+   "message": "Manufacturer ID {{manufacturer_id}} is not found",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052285",
+   "message": "Manufacturer ID {{manufacturer_id}} is not associated with the seller",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052287",
+   "message": "Product responsible person is required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052288",
+   "message": "The number of responsible person ids cannot exceed {{max_limit}}, and cannot less {{min_limit}}.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052289",
+   "message": "Responsible person ID {{rp_id}} is not found",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052290",
+   "message": "Responsible person ID {{rp_id}} is not associated with the seller",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052291",
+   "message": "Extra identification code information is not supported in this region.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052292",
+   "message": "The number of extra identification codes cannot exceed the allowed limits.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052293",
+   "message": "When identifier code is not filled in, extra identification code is not allowed to be filled in.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052294",
+   "message": "The format of the extra identification code is incorrect.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052295",
+   "message": "Duplicate manufacturer IDs associated with the same product",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052296",
+   "message": "Duplicate responsible person IDs associated with the same product",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052300",
+   "message": "product main image uri illegal",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052301",
+   "message": "Width and length of main image must be at least {{min_limit}}, check uri {{uri}}",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052302",
+   "message": "The main images size exceed limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052304",
+   "message": "Main product image format not support.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052305",
+   "message": "The main images aspect ratio cannot exceed max limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052306",
+   "message": "main product images count exceed limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052307",
+   "message": "skus in the lottery cannot be deleted",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052308",
+   "message": "There's an ongoing appeal. If you wish to edit product details, please revoke the appeal first.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052309",
+   "message": "The seller does not have backorder permission.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052310",
+   "message": "The futures information filled in by the seller does not meet the requirements.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052311",
+   "message": "The number of backorder product exceeds the limit max_num, or the proportion of backorder product exceeds the limit max_ratio",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052313",
+   "message": "This product does not allow backorder inventory.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052314",
+   "message": "Standard product cannot be converted to MTO product",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052315",
+   "message": "Standard product cannot be converted to preorder product",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052316",
+   "message": "product second hand not applicable in this sale platform",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052324",
+   "message": "Product description image file format is not supported",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052329",
+   "message": "A pre-order product can't be changed to a regular product",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052330",
+   "message": "product is not supported to list in designated sale platform",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052332",
+   "message": "The seller center is locked during shop integration, only editing stock and price is allowed",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052340",
+   "message": "product description image uri illegal",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052341",
+   "message": "The description images size cannot exceed limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052342",
+   "message": "The description images space cannot exceed limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052343",
+   "message": "Product description image format not support.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052344",
+   "message": "The product description html syntax with error",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052345",
+   "message": "The product description html tag not support.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052346",
+   "message": "The product description has Chinese characters",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052348",
+   "message": "The product description html tag required attribute is miss.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052349",
+   "message": "The product description html tag not support nest.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052350",
+   "message": "The product description html tag contain illegal attribute.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052351",
+   "message": "The product description contains non-English characters.",
+   "source": "https://partner.tiktokshop.com/docv2/page/recommend-category-202309"
+  },
+  {
+   "code": "12052352",
+   "message": "The product description nest exceeding limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052356",
+   "message": "The number of 'supplementary_sku_images' for the sales attribute value exceeds the maximum limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052357",
+   "message": "'supplementary_sku_images' is only allowed when 'sku_img' is specified. Add an image to 'sku_img' and try again.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052358",
+   "message": "Tokopedia platform doesn't support this kind of product",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052359",
+   "message": "save subscribe not support",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052360",
+   "message": "The video id is not exist.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052361",
+   "message": "This base unit value count is not supported. The supported base unit values can be obtained from the Get Attribute API.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052362",
+   "message": "SKU unit count is required.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052364",
+   "message": "The warehouse is unavailable because this product cannot be shipped to the target market from this warehouse.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052365",
+   "message": "The manufacturer lacks language version information for this market.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052366",
+   "message": "The responsible person lacks language version information for this market.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052369",
+   "message": "external_id length check fail",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052371",
+   "message": "Auction product is bidding when it is not supported to change product info",
+   "source": "https://partner.tiktokshop.com/docv2/page/deactivate-products-202309"
+  },
+  {
+   "code": "12052372",
+   "message": "Generate EU energy label image failed",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052375",
+   "message": "product list price is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052376",
+   "message": "list price not support",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052382",
+   "message": "Can't edit Dilayani Tokopedia warehouse quantity",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052383",
+   "message": "product list price exceed limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052385",
+   "message": "Please enter valid certificate expiration date",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052393",
+   "message": "Product locked for Promotion and stock can't be updated below current stock",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052402",
+   "message": "seller shipping template is empty",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052403",
+   "message": "The warehouse does not support fulfillment for the current shop.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052404",
+   "message": "multi-warehouse not support customize logistics service",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052405",
+   "message": "The warehouse has not opened the subscribed logistics service",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052419",
+   "message": "The shop tasks necessary for posting products have not been completed. Please go to complete them",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052420",
+   "message": "warehouse didn't set logistics service",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052424",
+   "message": "Missing 'sale price' value",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052446",
+   "message": "Category is not open in this market",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052488",
+   "message": "This region doesn't support save draft after product submitted",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052490",
+   "message": "The handling time must be within the allowed limits.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052495",
+   "message": "Pfand packaging type is required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052497",
+   "message": "Pfand field is not supported in this country",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052498",
+   "message": "Pfand amount should not be filled.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052520",
+   "message": "product sale property image uri illegal",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052521",
+   "message": "The sale property images size over limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052522",
+   "message": "Product sale property image is required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052523",
+   "message": "Product sale property image format not support.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052524",
+   "message": "The sale property image aspect ratio invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052525",
+   "message": "The attribute max num cannot exceed 3.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052526",
+   "message": "The attribute value max num over limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052527",
+   "message": "The sale attribute id not exist.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052528",
+   "message": "You can add images to only 1 product variation, which will serve as the primary variation for display in the product options gallery.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052529",
+   "message": "The property value id not exist.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052530",
+   "message": "The warehouse ' {{warehouse ID}} ' does not belong to this shop/seller.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052531",
+   "message": "The warehouse is disabled.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052532",
+   "message": "the warehouse not delivery warehouse",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052533",
+   "message": "Removal, addition, and change of warehouses are not permitted. Please specify the original warehouses for the SKUs.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052534",
+   "message": "warehouse unable to delete",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052535",
+   "message": "Couldn't publish this product as you haven't set the return warehouse for your shop. Add the return warehouse information on TikTok Shop Seller Center first and try again.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052543",
+   "message": "Products that support pfand are not supported in the creation of Virtual Bundles.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052547",
+   "message": "There is no version of this product that is under review. Please obtain the online version.",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-product-202309"
+  },
+  {
+   "code": "12052549",
+   "message": "The current shipping template is unavailable due to the unavailability of shipping method. Please change the shipping template.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052550",
+   "message": "SKU property must contain all properties",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052553",
+   "message": "Sku id duplicate",
+   "source": "https://partner.tiktokshop.com/docv2/page/update-price-202309"
+  },
+  {
+   "code": "12052554",
+   "message": "sku name contain Chinese characters",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052555",
+   "message": "The warehouse id is duplicate",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052557",
+   "message": "The SKU ID does not belong to the product.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052558",
+   "message": "Number of product skus exceed limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052559",
+   "message": "The product with duplicate default sku.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052560",
+   "message": "The SKU contains duplicate sales attribute.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052570",
+   "message": "product price exceed limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052571",
+   "message": "Missing price for SKU(s)",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052572",
+   "message": "the sale price is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052574",
+   "message": "unit price config is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052585",
+   "message": "deposit balance is not enough",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052591",
+   "message": "Invalid number of digits of identifier code",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052592",
+   "message": "Identifier code already entered, cannot enter the same code twice",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052593",
+   "message": "The identifier code cannot be changed once be submitted",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052598",
+   "message": "Only the last digit supports input X",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052600",
+   "message": "The identifier code type must be selected",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052603",
+   "message": "Scheduled listing is not supported",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052604",
+   "message": "The scheduled listing time is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052650",
+   "message": "product qualification image uri illegal",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052655",
+   "message": "qualification id not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052656",
+   "message": "qualification id duplicate",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052657",
+   "message": "qualification image and pdf file is out of limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052658",
+   "message": "product qualification file uri illegal",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052670",
+   "message": "The size chart image URI is invalid. Note: API users must use the URI generated by the Upload Product Image API.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052671",
+   "message": "The sizechart images size over limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052673",
+   "message": "Product sizechart image is required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052700",
+   "message": "The seller is inactive.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052701",
+   "message": "do not support cross-boarder seller create local product directly",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052702",
+   "message": "seller does not support pre-order",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052703",
+   "message": "Invalid seller tax number",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052704",
+   "message": "seller id not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052706",
+   "message": "The minimum sales quantity should not be exceed limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052707",
+   "message": "Setting minimum sales quantity is not supported",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052712",
+   "message": "sku's pre_order is invalid",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052722",
+   "message": "The image URI does not exist in TikTok Shop.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052805",
+   "message": "Bundle does not support adding this product type",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052830",
+   "message": "The number of sub-products contained in each combo cannot exceed {{max_limit}}.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052831",
+   "message": "The number of sub-skus contained in each combo sku cannot exceed {{max_limit}}.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052832",
+   "message": "The sub-SKU coefficient associated with each combo SKU cannot exceed {{max_limit}}, and cannot less {{min_limit}}.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052833",
+   "message": "The number of combo associated with a product cannot exceed the max limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052834",
+   "message": "The number of combo sku associated with a sku cannot exceed limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052835",
+   "message": "Sub product ID not exist",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052836",
+   "message": "The category of the combo is inconsistent with the category of the main sub-product.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052837",
+   "message": "The category of the combo is not in the set of restricted categories.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052838",
+   "message": "The first-level categories of the sub-products in the combo are inconsistent",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052840",
+   "message": "Sub-skus in a combo sku cannot be duplicated",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052841",
+   "message": "The sub-sku relationship corresponding to different combo sku cannot be duplicated.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052842",
+   "message": "The combo does not include the main sub-product",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052844",
+   "message": "The sub-sku is not in the sub-product",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052845",
+   "message": "Failed to create, does not support non-live status product",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052846",
+   "message": "combo does not support adding this product type",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052847",
+   "message": "The combo sku relationship cannot be changed",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052848",
+   "message": "Combo cannot set minimum sale quantity",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052849",
+   "message": "You don't have the permission to operate combo.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052851",
+   "message": "The warehouse of combo sku is empty.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052853",
+   "message": "The sale property of combo mismatch.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052854",
+   "message": "The sale property of combo is not unique.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052855",
+   "message": "The warehouse of combo mismatch.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052856",
+   "message": "The combo does not support customize logistics service",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052857",
+   "message": "Combined products and normal products cannot be converted to each other.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052858",
+   "message": "The SKU of a combined product cannot be associated with the SKU of other combined products.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052859",
+   "message": "When the combined SKU is only associated with one sub-SKU, the coefficient of this sub-SKU cannot be less than 2.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052861",
+   "message": "The price of combined SKU cannot exceed the sum of the prices of the sub-SKUs.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052862",
+   "message": "The brand of the combined product must be within the range of sub-product brands.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052863",
+   "message": "All SKU of a combined product need to be the combined SKU.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052864",
+   "message": "Unable to add deactivated SKUs to the combined product.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052881",
+   "message": "identity internal error",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052901",
+   "message": "The product in its current status is not available for this operation. Change the product status and try again.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052902",
+   "message": "The SKU list is empty. Either omit the list entirely, or provide all required details.",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052910",
+   "message": "Invalid input parameters. Refer to the API documentation for details.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052912",
+   "message": "No matching category found within your account's main category. Check your main category in the seller profile on Seller Center and ensure your product falls within its scope.",
+   "source": "https://partner.tiktokshop.com/docv2/page/recommend-category-202309"
+  },
+  {
+   "code": "12052915",
+   "message": "package weight unit and dimension unit miss match.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052916",
+   "message": "The package unit is not supported in the current region.",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052921",
+   "message": "Couldn't edit the inventory quantity because this product shares the inventory with the source shop",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052922",
+   "message": "edit fields limit",
+   "source": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+  },
+  {
+   "code": "12052923",
+   "message": "contact info required",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052931",
+   "message": "The title must follow these formatting rules: it cannot contain HTML escape characters (e.g.,  ), emojis, or ASCII control characters (e.g., \\u007F). It also cannot consist solely of symbols (e.g., //// or !@#$$$&), nor can it have more than 9 consecutive repeated characters (e.g., aaaaaaaaa or 111111111).",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052932",
+   "message": "The description must follow these formatting rules: it cannot contain HTML escape characters (e.g.,  ), emojis, or ASCII control characters (e.g., \\u007F). It also cannot consist solely of symbols (e.g., //// or !@#$$$&), nor can it have more than 9 consecutive repeated characters (e.g., aaaaaaaaa or 111111111).",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052933",
+   "message": "Sales attribute names must follow these formatting rules: it cannot contain HTML escape characters (e.g.,  ), emojis, or ASCII control characters (e.g., \\u007F). It also cannot consist solely of symbols (e.g., //// or !@#$$$&), nor can it have more than 9 consecutive repeated characters (e.g., aaaaaaaaa or 111111111).",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052934",
+   "message": "Sales attribute value names must follow these formatting rules: it cannot contain HTML escape characters (e.g.,  ), emojis, or ASCII control characters (e.g., \\u007F). It also cannot consist solely of symbols (e.g., //// or !@#$$$&), nor can it have more than 9 consecutive repeated characters (e.g., aaaaaaaaa or 111111111).",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052935",
+   "message": "Product attribute value names must follow these formatting rules: it cannot contain HTML escape characters (e.g.,  ), emojis, or ASCII control characters (e.g., \\u007F). It also cannot consist solely of symbols (e.g., //// or !@#$$$&), nor can it have more than 9 consecutive repeated characters (e.g., aaaaaaaaa or 111111111).",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+  },
+  {
+   "code": "12052990",
+   "message": "The check failed.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "12052992",
+   "message": "no permission to create gift product",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052994",
+   "message": "seller is not toko seller",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052995",
+   "message": "seller has not finished onboarding to tts",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "12052996",
+   "message": "external_id duplicated",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "21008111",
+   "message": "The order or package does not belong to the current seller.",
+   "source": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+  },
+  {
+   "code": "33001002",
+   "message": "internal error",
+   "source": "https://partner.tiktokshop.com/docv2/page/check-listing-prerequisites-202312"
+  },
+  {
+   "code": "36004004",
+   "message": "Invalid auth code.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009002",
+   "message": "Too many requests. You've made too many requests in a short period of time.",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "36009003",
+   "message": "Internal error. Please try again. If the issue persists after multiple attempts, please contact platform support.",
+   "source": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid API version. The `version` value is invalid or unsupported.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid credentials. Invalid `app_key` query parameter.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid credentials. The `access_token` header is invalid.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid credentials. The `x-tts-access-token` header is invalid.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid identifier. The `shop_id` query parameter is invalid.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid timestamp. The value of the `timestamp` query parameter must not be earlier than 5 minutes before the current time.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid timestamp. The value of the `timestamp` query parameter must not be lesser than 0.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Invalid timestamp. The value of the `timestamp` query parameter must not exceed the current time by more than 30 seconds.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Missing credentials. The request does not include a required signature in the query.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Unexpected identifier. The `category_asset_cipher` query parameter is not required for this request.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "Unexpected identifier. The `shop_cipher` query parameter is not required for this request.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009004",
+   "message": "invalid param error",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  },
+  {
+   "code": "36009007",
+   "message": "Request timeout. The request to the endpoint timed out.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009009",
+   "message": "Invalid path. The specified path does not match any available endpoint.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009010",
+   "message": "Invalid method. The HTTP method used is not supported by this endpoint.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009014",
+   "message": "Invalid API version. The `version` value is invalid or unsupported.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009021",
+   "message": "Invalid file size. The uploaded file size exceeds the maximum limit.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009022",
+   "message": "Invalid request format. The request body format must be `application/json` for structured data or `multipart/form-data` for binary files.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009023",
+   "message": "Invalid request format. The value of the `content-type` header must be `multipart/form-data`.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "36009033",
+   "message": "Access denied. Your IP address is not in the IP allow list configured for this app.",
+   "source": "https://partner.tiktokshop.com/docv2/page/common-errors"
+  },
+  {
+   "code": "98001004",
+   "message": "Parameter {param_name} is invalid. Reason: {reason}. Expected: {expected_value}",
+   "source": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+  }
+ ]
+}

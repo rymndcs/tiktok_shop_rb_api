@@ -1,0 +1,29 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/get-categories-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "GET /product/202309/categories"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "categories": [
+        {
+          "id": "600002",
+          "parent_id": "600001",
+          "local_name": "Home Supplies",
+          "is_leaf": false,
+          "permission_statuses": [
+            "INVITE_ONLY",
+            "NON_MAIN_CATEGORY"
+          ]
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

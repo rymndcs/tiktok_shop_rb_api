@@ -1,0 +1,122 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/search-products-202502",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "POST /product/202502/products/search"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "total_count": 200,
+      "products": [
+        {
+          "id": "1729592969712207008",
+          "title": "Short Boat Invisible Socks",
+          "status": "ACTIVATE",
+          "skus": [
+            {
+              "id": "1729592969712207012",
+              "seller_sku": "Color-Red-XM01",
+              "price": {
+                "currency": "USD",
+                "tax_exclusive_price": "111.01",
+                "sale_price": "121.11",
+                "starting_bid_price": "2"
+              },
+              "inventory": [
+                {
+                  "warehouse_id": "7068517275539719942",
+                  "quantity": 999,
+                  "backorder_quantity": 888,
+                  "handling_time": 5
+                }
+              ],
+              "list_price": {
+                "amount": "1",
+                "currency": "USD"
+              },
+              "external_list_prices": [
+                {
+                  "source": "SHOPIFY_COMPARE_AT_PRICE",
+                  "amount": "1",
+                  "currency": "USD"
+                }
+              ],
+              "pre_sale": {
+                "type": "PRE_ORDER",
+                "fulfillment_type": {
+                  "handling_duration_days": 7,
+                  "release_date": 1619611761
+                }
+              },
+              "status_info": {
+                "status": "DEACTIVATED",
+                "deactivation_source": "PLATFORM"
+              },
+              "fees": [
+                {
+                  "type": "PFAND",
+                  "amount": "1.01",
+                  "additional_attribute": "SINGLE_USE"
+                }
+              ]
+            }
+          ],
+          "sales_regions": [
+            "US"
+          ],
+          "create_time": 1234567890,
+          "update_time": 1234567800,
+          "product_sync_fail_reasons": [
+            "The required qualification is missed."
+          ],
+          "is_not_for_sale": true,
+          "recommended_categories": [
+            {
+              "id": "853000",
+              "local_name": "Botol & Stoples Penyimpanan"
+            }
+          ],
+          "listing_quality_tier": "POOR",
+          "integrated_platform_statuses": [
+            {
+              "platform": "TOKOPEDIA",
+              "status": "PLATFORM_DEACTIVATED"
+            }
+          ],
+          "audit": {
+            "status": "AUDITING",
+            "pre_approved_reasons": [
+              "KYC_PENDING"
+            ]
+          },
+          "product_families": [
+            {
+              "id": "1000592969712207000",
+              "products": [
+                {
+                  "id": "1729592969712207008"
+                }
+              ]
+            }
+          ],
+          "has_draft": true,
+          "scheduled_sale": {
+            "is_enabled_scheduled_sale": false,
+            "schedule_sale_time": 1768899145000
+          },
+          "product_tags": [
+            "AUCTION"
+          ],
+          "selling_format": "FIXED_PRICE, LIVE_AUCTION, FIXED_PRICE_AND_LIVE_AUCTION"
+        }
+      ],
+      "next_page_token": "b2Zmc2V0PTAK"
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

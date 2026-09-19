@@ -1,0 +1,26 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/check-listing-prerequisites-202312",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "GET /product/202312/prerequisites"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "check_results": [
+        {
+          "check_item": "RETURN_WAREHOUSE",
+          "is_failed": true,
+          "fail_reasons": [
+            "Couldn't publish this product as you haven't set the return warehouse for your shop. Add the return warehouse information on TikTok Shop Seller Center first and try again."
+          ]
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/activate-product-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "POST /product/202309/products/activate"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "errors": [
+        {
+          "code": 12052990,
+          "message": "Check failed",
+          "detail": {
+            "product_id": "1729382588639839583",
+            "extra_errors": [
+              {
+                "code": 12052048,
+                "message": "You can't edit other sellers' products"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

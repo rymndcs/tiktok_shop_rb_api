@@ -1,0 +1,43 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/create-product-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "POST /product/202309/products"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "product_id": "1729592969712207008",
+      "skus": [
+        {
+          "id": "1729592969712207012",
+          "seller_sku": "Color-Red-XM001",
+          "sales_attributes": [
+            {
+              "id": "100000",
+              "value_id": "1729592969712207123"
+            }
+          ],
+          "external_sku_id": "1729592969712207234",
+          "fees": [
+            {
+              "type": "PFAND",
+              "amount": "1.01",
+              "additional_attribute": "SINGLE_USE"
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        {
+          "message": "The [brand_id]:123 field is incorrect and has been automatically cleared by the system. Reason: [Brand does not exist]. You can edit it later."
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

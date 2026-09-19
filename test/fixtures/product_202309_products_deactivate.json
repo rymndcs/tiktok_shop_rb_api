@@ -1,0 +1,26 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/deactivate-products-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "POST /product/202309/products/deactivate"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "errors": [
+        {
+          "code": 12052048,
+          "message": "You can't edit other sellers' products",
+          "detail": {
+            "product_id": "1729382588639839583"
+          }
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

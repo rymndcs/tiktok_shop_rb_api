@@ -1,0 +1,87 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/get-category-rules-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "GET /product/202309/categories/{category_id}/rules"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "product_certifications": [
+        {
+          "id": "602362",
+          "name": "SNI Certificate",
+          "is_required": true,
+          "document_details": "Upload a user manual or instructions in the official local language.\\n\\nWhere there are multiple items sold as a part of a bundle, please clearly indicate which specific product the certification pertains to in the uploaded file or image.",
+          "sample_image_url": "https://p-boei18n.byted.org/tos-boei18n-i-jvtte31kaf/80b32f2896829eeb69d4b278c4f3aa75.jpg~tplv-jvtte31kaf-origin-jpeg.jpeg",
+          "requirement_conditions": [
+            {
+              "condition_type": "VALUE_ID_MATCH",
+              "attribute_id": "101610",
+              "attribute_value_id": "1024358"
+            }
+          ],
+          "expiration_date": {
+            "is_required": true
+          }
+        }
+      ],
+      "size_chart": {
+        "is_supported": true,
+        "is_required": true,
+        "measurement_and_options": [
+          {
+            "measurement_type": "BODY_MEASUREMENTS",
+            "options": [
+              {
+                "name": "Bust",
+                "id": "size_chart_option_bust",
+                "role": "KEY",
+                "unit": "LENGTH",
+                "metric_value_range": [
+                  "70",
+                  "160"
+                ],
+                "imperial_value_range": [
+                  "27.5",
+                  "63"
+                ]
+              }
+            ]
+          }
+        ],
+        "size_types": [
+          "size_chart_size_type_regular",
+          "size_chart_size_type_petite"
+        ]
+      },
+      "cod": {
+        "is_supported": true
+      },
+      "package_dimension": {
+        "is_required": true
+      },
+      "epr": {
+        "is_required": false
+      },
+      "responsible_person": {
+        "is_required": false
+      },
+      "manufacturer": {
+        "is_required": false
+      },
+      "allowed_special_product_types": "\"PRE_ORDER\"",
+      "fees": [
+        {
+          "type": "PFAND",
+          "is_required": true
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

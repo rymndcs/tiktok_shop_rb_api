@@ -1,0 +1,29 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/recommend-category-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "POST /product/202309/categories/recommend"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "categories": [
+        {
+          "id": "605254",
+          "is_leaf": true,
+          "level": 1,
+          "name": "Teas",
+          "permission_statuses": [
+            "INVITE_ONLY"
+          ]
+        }
+      ],
+      "leaf_category_id": "605254"
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

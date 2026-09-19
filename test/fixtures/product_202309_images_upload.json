@@ -1,0 +1,22 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "POST /product/202309/images/upload"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+      "url": "https://p-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe\n",
+      "height": 720,
+      "width": 720,
+      "use_case": "MAIN_IMAGE"
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}

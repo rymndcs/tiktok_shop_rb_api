@@ -1,0 +1,42 @@
+{
+  "_source": {
+    "url": "https://partner.tiktokshop.com/docv2/page/get-attributes-202309",
+    "pulled": "2026-09-20",
+    "origin": "official documentation Response Sample",
+    "endpoint": "GET /product/202309/categories/{category_id}/attributes"
+  },
+  "status": 200,
+  "headers": {},
+  "body": {
+    "code": 0,
+    "data": {
+      "attributes": [
+        {
+          "id": "100392",
+          "name": "Occasion",
+          "type": "PRODUCT_PROPERTY",
+          "is_requried": false,
+          "values": [
+            {
+              "id": "1001533",
+              "name": "Birthday",
+              "icon_url": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/37a9d5d39c27480d9870f73a2ad7cc95~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=11254&from=3455097676&height=956&idc=no1a&ps=933b5bde&shcp=9b759fb9&shp=cdf09b4c&t=555f072d&width=1000"
+            }
+          ],
+          "value_data_format": "POSITIVE_INT_OR_DECIMAL",
+          "is_customizable": true,
+          "requirement_conditions": [
+            {
+              "condition_type": "VALUE_ID_MATCH",
+              "attribute_id": "101610",
+              "attribute_value_id": "1024358"
+            }
+          ],
+          "is_multiple_selection": true
+        }
+      ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+  }
+}
